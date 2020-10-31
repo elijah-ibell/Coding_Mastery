@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Javascript Progress</title>
+        <link type="text/css" rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+        <section>
+
+        <h1>Fundamentals I</h1>
+
+        <p>This page acts as a record of the completedness of my Mastering of Javascript.</p>
+        <hr>
+        <hr>
+        <h2>Fundamentals</h2>
+        <hr>
+        <h3>Data types</h3>
+
+        <p>There are 8 data types: </p>
+
+        <ol>
+            <li>number</li>
+            <li>bigint</li>
+            <li>string</li>
+            <li>boolean</li>
+            <li>null</li>
+            <li>undefined</li>
+            <li>object and symbol</li>
+        </ol>
+
+        <hr>
+        
+        <h3>Conditionals</h3>
+
+        <p>There are two ways to do conditionals in JS - if statements and ? statements.</p>
+
+        <p>The following examples do not handle test cases that are exactly 4.</p>
+
+        <p>There is also no error handling for incorrect types.</p>
+        <pre>
+            function conditional(){
+                let a = prompt("Enter a value for 'a'");
+
+                (a > 4) ? alert("a is greater than 4") : alert("a is lesser than 4");
+            }
+        </pre>
+
+        <br>
+        
+        <button onclick="conditional()">Test 1</button><br><br>
+        <button onclick="conditional2()">Test 2</button>
+        <button onclick="alert(conditional2)">See Code</button>
+
+        <hr>
+        <h3>Logical Operators</h3>
+
+        <p>OR, AND, NOT</p>
+        <p>||, &&, !</p>
+
+        <pre>
+            function noZero(){
+                let a = prompt("input a value for a");
+                let b = prompt("input a value for b");
+
+                if(a == 0 || b == 0){
+                    alert("you lose!")
+                } else {
+                    alert("you win!")
+                }
+            }
+        </pre>
+
+        <p>Don't enter zero to win!</p>
+
+        <button onclick="noZero()">Test 3</button>
+        <button onclick="noZero2()">Test 4</button>
+        <button onclick="alert(noZero2)">See Code</button>
+        <hr>
+        <h3>Nullish Coalescing Operator - ??</h3>
+
+        <p><code>a ?? b</code> returns a if a is not null or undefined, otherwise it returns b.</p>
+        <p>This can be used in an instance where we want to omit falsy results and only check for empty results.</p>
+        <p>e.g. let height = 0; <code>height ?? 100;</code> if we used <code>||</code>, we would instead return 100. ?? will return 0.</p>
+        
+        <hr>
+        <h3>Loops!</h3> <div class="healthbar"><div class="percent75"></div></div>
+
+        <p class="todo">LEARN about do-while loops</p>
+        <p>javascript has three main loops: while , do-while and for loops.</p>
+
+        <pre>
+            function countToThree(){
+                for(let x = 0; x < 3; x++){
+                    alert(x + 1);
+                }
+            }
+        </pre>
+
+        <button onclick="countToThree()">Test 5</button>
+
+        <hr>
+        <h3>Switch Statements</h3>
+
+        <p>Switch statements are like a chain of if statements, in a more concise syntax.</p>
+
+        <pre>
+            function (){
+                let a = prompt("Enter a number between 1 and 5");
+
+                switch(a){
+                    case "1": alert("ONE!!!"); break;
+                    case "2": alert("TWO!!!"); break;
+                    case "3": alert("THREE!!!"); break;
+                    case "4": alert("FOUR!!!"); break;
+                    case "5": alert("FIVE!!!"); break;
+                    default: alert("Nope, that aint one of em'! Try Again!"); break;
+                }
+            }
+        </pre>
+
+        <button onclick="switchUp()">Test 6</button>
+    </section>
+
+
+        <script>
+            function conditional(){
+                let a = prompt("Enter a value for 'a'");
+
+                (a > 4) ? alert("a is greater than 4") : alert("a is lesser than 4");
+            }
+
+            function conditional2(){
+                let a = prompt("Enter a value for a");
+
+                if(a > 4){
+                    alert("a is greater than 4");
+                } else {
+                    alert("a is lesser than 4");
+                }
+            }
+
+            function noZero(){
+                let a = prompt("input a value for a");
+                let b = prompt("input a value for b");
+
+                if(a == 0 || b == 0){
+                    alert("you lose!")
+                } else {
+                    alert("you win!")
+                }
+            }
+            
+            function noZero2(){
+                let a = prompt("input a value for a");
+                let b = prompt("input a value for b");
+
+                if(a != 0 && b != 0){
+                    alert("you win!")
+                } else {
+                    alert("you lose!")
+                }
+            }
+
+            function countToThree(){
+                for(let x = 0; x < 3; x++){
+                    alert(x + 1);
+                }
+            }
+
+            function switchUp(){
+                let a = prompt("Enter a number between 1 and 5");
+
+                switch(a){
+                    case "1": alert("ONE!!!"); break;
+                    case "2": alert("TWO!!!"); break;
+                    case "3": alert("THREE!!!"); break;
+                    case "4": alert("FOUR!!!"); break;
+                    case "5": alert("FIVE!!!"); break;
+                    default: alert("Nope, that aint one of em'! Try Again!"); break;
+                }
+            }
+        </script>
+    </body>
+
+</html>

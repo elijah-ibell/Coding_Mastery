@@ -1,0 +1,69 @@
+pre{
+    background-color: slategrey;
+    color:white;
+    box-sizing: border-box;
+    border-radius:15px;
+    padding:35px;
+    width: 800px;
+    height:auto;
+}
+
+section{
+    width:950px;
+    position:relative;
+    margin-left:50%;
+    left:-475px;
+}
+
+.todo{
+    background-color: palegoldenrod;
+}
+
+h3 {
+    display:inline-block;
+}
+
+.healthbar {
+    float:right;
+    position:relative;
+    top:10px;
+    display:inline-block;
+    background-color: tomato;
+    height: 30px;
+    width:200px;
+}
+
+.healthbar_header{
+    display:inline-block;
+    text-decoration: underline;
+}
+
+.percent25{
+    background-color:limegreen;
+    height:100%;
+    position:relative;
+    float:left;
+    width:25%;
+}
+.percent50{
+    background-color:limegreen;
+    height:100%;
+    position:relative;
+    float:left;
+    width:50%;
+}
+.percent75{
+    background-color:limegreen;
+    height:100%;
+    position:relative;
+    float:left;
+    width:75%;
+}
+
+.percent100{
+    background-color:limegreen;
+    height:100%;
+    position:relative;
+    float:left;
+    width:100%;
+}
