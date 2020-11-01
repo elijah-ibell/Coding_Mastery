@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CD GAME</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <style>
+            #output{
+                width:500px;
+                height:350px;
+                background-color:cadetblue;
+                color:whitesmoke;
+                padding:35px;
+            }
+            #panda button{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="output"></div>
+
+            <form id="panda" method="post">
+                <label>Command</label><input id="command" type="text" />
+                <button type="submit">Submit</button>
+            </form>
+        <script>
+
+            let cmd = document.getElementById("command");
+            let out = document.getElementById("output");
+
+
+
+            //prevent form submission on submit event
+            // your function
+            var my_func = function(event) {
+                out.innerText = out.innerText + "\n" + cmd.value;
+                let str = cmd.value;
+                let str_arr = str.split(" ");
+                switch(str_arr[0]){
+                    case "cd":console.log("CD!!!"); break;
+                    case "ls":console.log("LS!!!"); break;
+                    default: break;
+                }
+                cmd.value="";
+                event.preventDefault();
+            };
+
+            // your form
+            var form = document.getElementById("panda");
+
+            // attach event listener
+            form.addEventListener("submit", my_func, true);
+        </script>
+    </body>
+
+</html>
